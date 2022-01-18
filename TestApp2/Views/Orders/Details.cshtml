@@ -1,0 +1,74 @@
+﻿@model TestApp2.Models.Order
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Order</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Идентификатор заказа
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Id)
+        </dd>
+
+        <dt>
+            Город отправителя
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SenderCity)
+        </dd>
+
+        <dt>
+           Адрес отправителя
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SenderAddress)
+        </dd>
+
+        <dt>
+            Город получателя
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RecipientCity)
+        </dd>
+
+        <dt>
+           Адрес получателя
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RecipientAddress)
+        </dd>
+
+        <dt>
+            Вес посылки
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Weight)
+        </dd>
+
+        <dt>
+            Дата отправления
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Date)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
